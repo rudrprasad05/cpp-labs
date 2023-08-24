@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Student.h"
+#include "Person.h"
 
 using namespace std;
 
@@ -12,6 +13,10 @@ const int MAX_SIZE = 10;
 
 void discard_line(ifstream &in);
 void print_students_records(Student s[], int size);
+void print_info(Student &s);
+void fill_info(Student &s);
+
+		
 
 int main(){
 
@@ -38,7 +43,7 @@ int main(){
 	
     while(input>>id >>marktemp){
     	
-    	student[total_records].setId(id);
+    	student[total_records].Person::set_id(id);
     	student[total_records].setMarks(marktemp);
         total_records++;
     }
@@ -52,13 +57,16 @@ int main(){
     print_students_records (student, total_records );
     
     system("PAUSE");
+    
+    fill_info(student[1]);
+    print_info(student[1]);
     return 0;  
 }
 
 void print_students_records(Student student[], int size){
     cout<<"\n\nstudents' records"<<endl<<endl;
     for (int i = 0; i < size; i++){
-        cout<<"id: "<<student[i].getId() <<", marks: "<<student[i].getMarks() <<", grade: " <<student[i].getGrade()<<endl;
+        cout<<"id: "<<student[i].Person::get_id() <<", marks: "<<student[i].getMarks() <<", grade: " <<student[i].getGrade()<<endl;
         
     }
     cout<<endl;
@@ -73,5 +81,47 @@ void discard_line(ifstream &in)
     do
 	    in.get(c);
 	while (c!='\n');
+}
+
+
+void print_info(Student &s){
+	string name, address, phone, email, dob, citizenship;
+	
+	name = s.get_name();
+	address = s.get_address();
+	phone = s.get_phone();
+	email = s.get_email();
+	dob = s.get_dob();
+	citizenship = s.get_citizenship();
+	
+	cout << name << address << phone << email << dob << citizenship;
+}
+
+void fill_info(Student &s){
+	string name, address, phone, email, dob, citizenship;
+	
+	cout << "Enter name: ";
+	cin >> name;
+	s.set_name(name);
+	
+	cout << "Enter address: ";
+	cin >> address;
+	s.set_address(address);
+	
+	cout << "Enter phone: ";
+	cin >> phone;
+	s.set_phone(phone);
+	
+	cout << "Enter email: ";
+	cin >> email;
+	s.set_email(email);
+	
+	cout << "Enter dob: ";
+	cin >> dob;
+	s.set_dob(dob);
+	
+	cout << "Enter citizenship: ";
+	cin >> citizenship;
+	s.set_dob(citizenship);
 }
 

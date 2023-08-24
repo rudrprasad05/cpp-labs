@@ -21,10 +21,11 @@ Student::~Student()
 
 
 //Setter methods
-void Student::setId(string id)
-{
-	this->id = id;
-}
+
+//void Student::set_id(string id)
+//{
+//	this->id = id;
+//}
 void Student::setMarks(int mark)
 {
 	this->marks = mark;
@@ -49,10 +50,11 @@ void Student::determine_grade(int marks){
 
 
 //Getter methods
-string Student::getId()
-{
-	return id;
-}
+
+//string Student::get_id()
+//{
+//	return id;
+//}
 int Student::getMarks()
 {
 	return marks;

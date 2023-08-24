@@ -1,28 +1,28 @@
 #include "Person.h"
 
-void person::set_id(string id){
+void Person::set_id(string id){
 	this->id = id;
 }
-void person::set_name(string name){
+void Person::set_name(string name){
 	this->name = name;
 }
-void person::set_address(string address){
+void Person::set_address(string address){
 	this->address = address;
 }
-void person::set_phone(string phone){
+void Person::set_phone(string phone){
 	this->phone = phone;
 }
-void person::set_email(string email){
+void Person::set_email(string email){
 	this->email = email;
 }
-void person::set_dob(string dob){
+void Person::set_dob(string dob){
 	this->dob = dob;
 }
-void person::set_citizenship(string citizenship){
+void Person::set_citizenship(string citizenship){
 	this->citizenship = citizenship;
 }
 
-void person::print(){
+void Person::print(){
     cout<<"\nID: "<<id;
     cout<<"\nName: "<<name;
     cout<<"\nAddress: "<<address;
@@ -32,25 +32,25 @@ void person::print(){
     cout<<"\nCitizenship: "<<citizenship<<endl<<endl;
 }
 
-string person::get_id(){
-	return id;
+string Person::get_id(){
+	return this->id;
 }
-string person::get_name(){
+string Person::get_name(){
 	return name;
 }
-string person::get_address(){
+string Person::get_address(){
 	return address;
 }
-string person::get_phone(){
+string Person::get_phone(){
 	return phone;
 }
-string person::get_email(){
+string Person::get_email(){
 	return email;
 }
-string person::get_dob(){
+string Person::get_dob(){
 	return dob;
 }
-string person::get_citizenship(){
+string Person::get_citizenship(){
 	return citizenship;
 }
 

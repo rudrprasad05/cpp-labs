@@ -5,10 +5,10 @@
 #include <iostream>
 using namespace std;
 
-class person{
+class Person{
     public:
-        person(){;}
-        ~person(){;}
+        Person(){;}
+        ~Person(){;}
 
         void set_id(string);
         void set_name(string);
