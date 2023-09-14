@@ -1,0 +1,8 @@
+NumStudents: 5
+
+Marks
+10
+12
+14
+16
+18
