@@ -5,27 +5,30 @@ using namespace std;
 int sum(int n){
 	
 
-	if(n <= 1){
-		return n;
+	if(n == 1){
+		return 0;
 	}
-	
-	return n + sum(n - 1);
+
+	return n + sum(n + 1);
 	
 }
 
+double fact(double n){
+	if(n <= 1){
+		return n;
+	}
+	return n * fact(n - 1);
+}
+
+double test(int i){
+	if (i == 0){
+		return 4;
+	}
+	return (5 * i * test(i - 1));
+}
+
 int main(){
-	int num, min, range_sum;
 	
-	cout << "enter number" << endl;
-	cin >> num;
+	cout << test(4);
 	
-	cout << "Sum of natural Numbers till " << num << " is: " << sum(num) << endl;
-	
-	cout << "enter max" << endl;
-	cin >> num;
-	
-	cout << "enter min";
-	cin >> min;
-	
-	range_sum = 
 }
